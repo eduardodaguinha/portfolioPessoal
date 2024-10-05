@@ -565,15 +565,42 @@ section {
   }
 
   section {
-    padding: 10rem 3% 2rem;
+    padding: 2rem 3% 2rem;
   }
 
   .footer {
     padding: 2rem 3%;
   }
+
+  .home-content p {
+    font-size: 2.3rem;
+  }
+
+  .home-img img {
+    width: 30vw;
+  }
+
+  .about-content {
+    margin: 0 4rem 4rem;
+  }
+
+  .projects h2 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
+  }
 }
 
 @media (max-width: 895px) {
+  section {
+    padding: 2rem 3% 2rem;
+    margin-bottom: 0 !important;
+  }
+
   #menu-icon {
     display: block;
   }
@@ -622,8 +649,7 @@ section {
   }
 
   .home-img img {
-    width: 50vw;
-    margin-top: 4rem;
+    width: 30vw;
   }
 
   .about {
@@ -631,21 +657,31 @@ section {
   }
 
   .about-content {
-    margin: 0 2rem 4rem;
+    margin: 0 4rem 4rem;
   }
 
   .about img {
     width: 40vw;
-    margin-top: 1rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
   }
 
+  .about .btn {
+    margin-bottom: 3rem;
+  }
+
   .projects h2 {
+    margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
   .projects-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
   }
 }
 
@@ -678,7 +714,7 @@ section {
   }
 
   .home-img img {
-    width: 60vw;
+    width: 40vw;
     top: 1rem;
   }
 
@@ -701,11 +737,20 @@ section {
     padding: 1rem 2rem;
     font-size: 1.4rem;
   }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
+  }
 }
 
 @media (max-width: 576px) {
   html {
     font-size: 50%;
+  }
+
+  .home-img img {
+    width: 50vw;
   }
 
   .header {
