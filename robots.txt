@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /Imagens/
+Disallow: /script.js
+Allow: /index.html
+Allow: /style.css
+Allow: /sitemap.xml
