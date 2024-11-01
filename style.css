@@ -1,0 +1,863 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #f9f9f9;
+  --second-bg-color: #e6edfd;
+  --text-color: black;
+  --main-color: #2e59a2;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+/* Estilo do Cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 9%;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: black;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+/* Seção "Início" */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 550;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  top: 2rem;
+  width: 16vw;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home-content p {
+  font-size: 2.3rem;
+  font-weight: 350;
+  width: 1000px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: 0.3rem solid var(--main-color);
+  font-size: 3rem;
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.05) translateY(-5px);
+  background-color: var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.5rem;
+  color: white;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: var(--bg-color);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.text-animation {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span::before {
+  content: "desenvolvedor Backend.";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+.text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 2px solid #f1f1f1;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--main-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "criador de soluções.";
+  }
+  21%,
+  40% {
+    content: "entusiasta de tecnologia.";
+  }
+  41%,
+  60% {
+    content: "apaixonado por código.";
+  }
+  61%,
+  80% {
+    content: "estudante de ADS.";
+  }
+  81%,
+  100% {
+    content: "movido por desafios.";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* Seção "Sobre" */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+  color: black;
+}
+
+.about-img {
+  border-radius: 50%;
+}
+
+.about-img img {
+  position: relative;
+  width: 30vw;
+  border-radius: 50%;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.about-content p {
+  font-size: 2.3rem;
+  margin: 20px 0 20px 0;
+  font-weight: 350;
+}
+
+/* Estilo da Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+  width: 50px;
+}
+
+/* Seção "Projetos" */
+.projects {
+  background: var(--bg-color);
+  color: black;
+}
+
+.projects h2 {
+  margin-bottom: 5rem;
+  color: black;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.projects-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid var(--main-color);
+  height: 300px;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.projects-box:hover {
+  background: var(--main-color);
+  color: white;
+  transform: scale(1.03);
+}
+
+.projects-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: baseline;
+  padding: 40px;
+}
+
+.projects-info h4 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.projects-info p {
+  margin-top: 2rem;
+  font-size: 16px;
+  font-weight: 350;
+  margin: auto;
+}
+
+.btn-info {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  font-size: 12px;
+  color: white;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.projects-box:hover .btn-info {
+  background: white;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.btn-info:hover {
+  transform: scale(1.05);
+  background: var(--bg-color);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.technology-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.technology-icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  font-size: 2.2rem;
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 0.2rem 0 0 1rem;
+}
+
+.projects-box:hover .technology-icons i {
+  color: white !important;
+  background-color: var(--main-color);
+  border: 0.2rem solid white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Seção "Contato" */
+.contact {
+  background-color: var(--second-bg-color);
+}
+.contact h2 {
+  margin-bottom: 2rem;
+  color: black;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 2px solid var(--main-color);
+  margin: 1rem 0;
+  resize: none;
+}
+.contact .btn {
+  margin-top: 2rem;
+}
+
+/* Estilo do Rodapé */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0;
+  background-color: var(--main-color);
+}
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+.footer .social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.3rem solid white;
+  font-size: 2.3rem;
+  border-radius: 50%;
+  color: white;
+  margin: 0rem 1.5rem 0rem 0;
+  transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+  color: var(--main-color);
+  transform: scale(1.05) translateY(-5px);
+  background-color: white;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid white;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.footer .copyright {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+#current-year {
+  color: white;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1285px) {
+  html {
+    font-size: 55%;
+  }
+
+  .projects-container {
+    padding-bottom: 7rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 5rem;
+  }
+
+  .home p {
+    width: 700px;
+    font-size: 2rem;
+  }
+
+  .home img {
+    width: 32vw;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 2rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+
+  .home-content p {
+    font-size: 2.3rem;
+  }
+
+  .home-img img {
+    width: 30vw;
+  }
+
+  .about-content {
+    margin: 0 4rem 4rem;
+  }
+
+  .projects h2 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
+  }
+}
+
+@media (max-width: 895px) {
+  section {
+    padding: 2rem 3% 2rem;
+    margin-bottom: 0 !important;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: black;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+
+  .home p {
+    font-size: 2rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.8rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .text-animation {
+    font-size: 2.8rem !important;
+  }
+
+  .home-img img {
+    width: 30vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about-content {
+    margin: 0 4rem 4rem;
+  }
+
+  .about img {
+    width: 40vw;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .about .btn {
+    margin-bottom: 3rem;
+  }
+
+  .projects h2 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 0 2rem;
+  }
+
+  .home p {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .home-content p {
+    font-size: 2rem;
+  }
+
+  .text-animation {
+    font-size: 2.6rem !important;
+  }
+
+  .home-img img {
+    width: 40vw;
+    top: 1rem;
+  }
+
+  .about-content p {
+    font-size: 2rem;
+  }
+
+  .projects-info p {
+    font-size: 2rem;
+  }
+
+  .technology-icons i {
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .btn,
+  .btn-info {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .contact h2{
+    margin-top: 2rem;
+    margin-bottom: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home-img img {
+    width: 50vw;
+  }
+
+  .header {
+    padding: 1.5rem 2%;
+  }
+
+  .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content p {
+    font-size: 2rem;
+  }
+
+  .text-animation {
+    font-size: 3rem !important;
+  }
+
+  .about-content p {
+    font-size: 2rem;
+  }
+
+  .projects-info h4 {
+    font-size: 2.2rem;
+  }
+
+  .projects-info p {
+    font-size: 2rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1.8rem;
+  }
+
+  .footer ul li {
+    padding: 0 5px;
+  }
+
+  .footer .list {
+    font-size: 15px !important;
+  }
+  
+  .footer .copyright {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.8rem;
+  }
+
+  .text-animation {
+    font-size: 2.5rem !important;
+  }
+
+  .about-content p {
+    font-size: 1.8rem;
+  }
+
+  .projects-info h4 {
+    font-size: 2.5rem;
+  }
+
+  .projects-info p {
+    font-size: 1.7rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1.6rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+  }
+
+  .about img {
+    width: 60vw;
+  }
+
+  .projects-container {
+    margin: 0 1rem;
+  }
+
+  .footer ul li {
+    padding: 0 3px !important;
+  }
+
+  .footer .list {
+    font-size: 14px !important;
+  }
+
+  .footer .copyright {
+    font-size: 14px !important;
+  }
+}
